@@ -3,7 +3,7 @@ pipeline {
     agent any
 	environment {
     PATH = "%SystemRoot%/system32"
-	PATH = "%M2_HOME%"
+	M2_HOME = "%M2_HOME%"
   }
     stages {
         stage ('Build Servlet Project') {
