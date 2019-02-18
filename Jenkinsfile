@@ -1,14 +1,17 @@
 
 pipeline {
     agent any
+	environment {
+    PATH = "%M2_HOME%"
+  }
     stages {
         stage ('Build Servlet Project') {
             steps {
-			path %M2_HOME%
+			
                 /*For windows machine */
                bat  'mvn clean package'}
 
-            }
+            
 
             post{
                 success{
@@ -20,4 +23,4 @@ pipeline {
         }
 	
 		}
-	
+	}
