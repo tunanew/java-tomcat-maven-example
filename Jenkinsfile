@@ -2,7 +2,7 @@
 pipeline {
     agent any
 	environment {
-    PATH = "%SystemRoot%\system32"
+    PATH = "%SystemRoot%/system32"
 	PATH = "%M2_HOME%"
   }
     stages {
