@@ -8,8 +8,6 @@ pipeline {
                 /*For windows machine */
                bat  'mvn clean package'
 
-                /*For Mac & Linux machine */
-               // sh  'mvn clean package'
             }
 
             post{
