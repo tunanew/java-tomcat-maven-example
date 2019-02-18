@@ -3,17 +3,20 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-               bat 'echo %PATH%'
-			   bat 'echo %M2_HOME%'
+               bat 'Build servlet project'
+			
             }
 
             
         }
 
-        stage ('Deploy Build in Staging Area'){
-            steps{
-                      echo 'Deployement Failure on PRODUCTION'
-            }
+        post {
+		success
+            {
+            
+            			echo 'Deployement Failure on PRODUCTION'
+                   archiveArtifacts artifact : '**/*.war'
+			}
         }
 
         
