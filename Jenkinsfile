@@ -1,15 +1,14 @@
 
 pipeline {
     agent any
-	environment {
-    PATH = "%M2_HOME%"
-  }
+
     stages {
         stage ('Build Servlet Project') {
             steps {
-			
-                /*For windows machine */
-               bat  'mvn clean package'}
+			echo 'Now Archiving ....'
+                /*For windows machine 
+               bat  'mvn clean package'*/
+			   }
 
             
 
