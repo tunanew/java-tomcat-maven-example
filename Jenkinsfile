@@ -6,7 +6,7 @@ pipeline {
             steps {
 			path %M2_HOME%
                 /*For windows machine */
-               bat  'mvn clean package'
+               bat  'mvn clean package'}
 
             }
 
@@ -20,4 +20,4 @@ pipeline {
         }
 	
 		}
-	}
+	
